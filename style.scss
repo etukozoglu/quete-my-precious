@@ -1,0 +1,82 @@
+/* -------------------------------------- */
+/* Default Fonts                          */
+/* -------------------------------------- */
+@font-face {
+  font-family: 'anironcregular';
+  src: url('fonts/aniron-webfont.woff2') format('woff2'),
+  url('fonts/aniron-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'party_businessregular';
+  src: url('fonts/partybusiness-webfont.woff2') format('woff2'),
+  url('fonts/partybusiness-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "anironcregular", Arial, serif;
+  font-size: calc(1rem + 1vw);
+}
+
+h2 {
+  font-size: calc(15px + 1vw);
+  margin: 2vw;
+}
+
+/* -------------------------------------- */
+/* Navbar                                 */
+/* -------------------------------------- */
+
+.navbar.navbar-expand-lg {
+  background-color: #FF7700;
+  .nav-link{
+    color: white;
+    font-size: 17px;
+    &:hover{
+      color: white;
+      text-decoration: underline white;
+    }
+  }
+  .navbar-nav, .nav-item{
+    margin-left: auto;
+  }
+  .fa-bars{
+    color: white;
+  }
+  .nav-item:not(:last-of-type){
+    @media (min-width:992px){
+      border-right: 1px solid white;
+    }
+  }
+}
+
+/* -------------------------------------- */
+/* Mise en page Sections                  */
+/* -------------------------------------- */
+
+section {
+  background-color: #EDEDED;
+  color: #2B2B2B;
+  padding: 15px;
+}
+
+/* -------------------------------------- */
+/* Footer                                 */
+/* -------------------------------------- */
+
+footer.row {
+  background-color: #FF7700;
+  margin: 0;
+  font-family: party_businessregular, Arial, serif;
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
