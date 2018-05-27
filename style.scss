@@ -1,3 +1,19 @@
+$main-color: #FF7700;
+$background-color: #EDEDED;
+$main-font-color: #2B2B2B;
+$golden: yellow;
+
+@mixin ring($size, $color){
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  vertical-align: -50%;
+  background-color: rgba(0,0,0,0);
+  box-shadow: $size/50 $size/50 $size/50 darken($color, 10%), inset $size/50 $size/50 $size/50 darken($color, 10%);
+  border: $size/11 solid $color;
+}
+
+
 /* -------------------------------------- */
 /* Default Fonts                          */
 /* -------------------------------------- */
@@ -24,7 +40,11 @@ body {
 
 h2 {
   font-size: calc(15px + 1vw);
-  margin: 2vw;
+  margin: 4vw auto;
+}
+
+.row {
+  margin: 25px auto;
 }
 
 /* -------------------------------------- */
@@ -32,7 +52,7 @@ h2 {
 /* -------------------------------------- */
 
 .navbar.navbar-expand-lg {
-  background-color: #FF7700;
+  background-color: $main-color;
   .nav-link{
     color: white;
     font-size: 17px;
@@ -59,8 +79,8 @@ h2 {
 /* -------------------------------------- */
 
 section {
-  background-color: #EDEDED;
-  color: #2B2B2B;
+  background-color: $background-color;
+  color: $main-font-color;
   padding: 15px;
 }
 
@@ -69,7 +89,7 @@ section {
 /* -------------------------------------- */
 
 footer.row {
-  background-color: #FF7700;
+  background-color: $main-color;
   margin: 0;
   font-family: party_businessregular, Arial, serif;
   ul {
@@ -78,5 +98,23 @@ footer.row {
   a {
     text-decoration: none;
     color: white;
+  }
+}
+
+.surrounded-title {
+  &:before, &:after{
+    content: "";
+    display: block;
+    margin: 0 10px;
+    @include ring(45px, $main-color);
+  }
+}
+
+.one-ring {
+  &:before{
+    content: "";
+    display: block;
+    margin: 0 10px;
+    @include ring(150px, $golden);
   }
 }
