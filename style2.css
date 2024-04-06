@@ -1,0 +1,40 @@
+.container {
+width: 1222px;
+
+}
+
+.col { 
+    flex: 0 0 auto; 
+    width: 9.09%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+}
+
+.space1 {
+margin-left: 88px;
+}
+
+.space2 {
+margin-right: 138px;
+}
+
+
+.dark-gray {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(29, 28, 28);
+}
+
+.orange {
+    height: 100px;
+    width: 100px;
+    background-color: #f4661b;
+
+}
+
+.yellow {
+    height: 100px;
+    width: 100px;
+    background-color: #ffcf00;
+}
